@@ -10,7 +10,7 @@ img{width:100%;height:auto;}
 .fa-code{color:khaki;}
 .typed-cursor{font-weight:500;}
 .me{width:15%;height:20%;border:0px;border-radius:20%;display:inline;margin-bottom:3%;}
-.intro{background-image:url('../img/meAtBelantis_dp.png');background-size:cover;font-family:monospace;}
+.intro{background-image:url('../img/meAtBelantis_.jpg');background-size:cover;font-family:monospace;}
 .who{background-image:url("../img/meAtBelantis_dp.png");background-size:cover;color:aliceblue;font-family:monospace;}
 .who a{color:#C26262;font-weight:600;}
 .love{background:#D4DEDE;}
@@ -78,7 +78,7 @@ nav nav-tabs li:active{color:black;}
 .major_skill{display:none;}
 .mini_skill{display:block;}
 }
-@media only screen and (max-width:935px){.intro{background-image:url('../img/meAtBelantis_dp.png');background-size:100% 50%;background-repeat:no-repeat;}
+@media only screen and (max-width:935px){.intro{background-image:url('../img/meAtBelantis_.jpg');background-size:100% 50%;background-repeat:no-repeat;}
 body{background-image:url('../img/meAtBelantis_dp.png');background-size:contain;}
 }
 #code_lang{color:#D64727;}
