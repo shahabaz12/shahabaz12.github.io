@@ -731,6 +731,187 @@
     .social-links a:hover {
         color: #1e90ff;
     }
+    /* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+    .hero {
+        flex-direction: column;
+        padding: 50px 20px;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .highlighted-paragraph span.title,
+    .highlighted-paragraph span.location {
+        font-size: 1.8rem;
+    }
+
+    .hero .buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero-image {
+        max-width: 80%;
+        margin: 20px auto 0;
+    }
+
+    .about {
+        padding: 50px 20px;
+    }
+
+    .about h2 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .about ul.quick-facts {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .work .project {
+        flex-direction: column; /* Stack the image and content vertically */
+        align-items: center;   /* Center align for better visuals */
+    }
+
+    .work .project img {
+        width: 100%;           /* Make the image take full width */
+        max-width: 300px;      /* Limit the maximum width for smaller screens */
+        margin-bottom: 15px;   /* Add spacing below the image */
+    }
+
+    .work .project-content {
+        padding: 10px;         /* Reduce padding for smaller screens */
+        text-align: center;    /* Center align text for a clean look */
+    }
+
+    .work .tags {
+        justify-content: center; /* Center align tags for better readability */
+    }
+
+    .carousel-container {
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        gap: 15px; /* Reduce gap between items */
+        padding: 0 10px; /* Add horizontal padding */
+        align-items: center; /* Center-align items */
+    }
+
+    .carousel-item {
+        width: 90%; /* Use most of the screen width */
+        max-width: 360px; /* Set a reasonable max width */
+        padding: 10px; /* Reduce padding */
+        border-radius: 8px; /* Slightly rounded corners */
+        text-align: center; /* Center-align text */
+        background-color: #1e1e1e; /* Keep background consistent */
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Add a soft shadow */
+        overflow: hidden; /* Ensure content stays within bounds */
+    }
+
+    .carousel-item img {
+        width: 100%; /* Ensure image scales to the container width */
+        height: auto; /* Maintain the aspect ratio */
+        max-height: 200px; /* Set a max height to ensure proper scaling */
+        object-fit: contain; /* Ensure full image is visible without cropping */
+        border-radius: 8px; /* Add rounded corners */
+        margin-bottom: 10px; /* Add spacing below the image */
+    }
+
+    .carousel-item h3 {
+        font-size: 1rem; /* Reduce heading size for mobile */
+        margin-bottom: 8px; /* Add spacing below heading */
+    }
+
+    .carousel-item p {
+        font-size: 0.9rem; /* Keep text readable */
+        margin: 0 0 10px; /* Reduce margin */
+        line-height: 1.4; /* Improve readability */
+    }
+
+    .carousel-item a {
+        font-size: 0.9rem; /* Adjust link size */
+        text-decoration: underline; /* Ensure link stands out */
+        color: #1e90ff; /* Highlight the link */
+    }
+
+    .controls {
+        display: flex;
+        justify-content: space-between; /* Align buttons on the sides */
+        width: 100%;
+        margin-top: 10px; /* Add spacing above the buttons */
+        padding: 0 10px; /* Align controls with the carousel container */
+    }
+
+    .controls button {
+        background-color: #333; /* Button background */
+        color: #fff; /* Button text */
+        padding: 10px 15px; /* Adjust padding for better touch targets */
+        border: none; /* Remove borders */
+        border-radius: 5px; /* Add rounded corners */
+        font-size: 1rem; /* Adjust font size */
+        cursor: pointer; /* Pointer cursor */
+    }
+
+    .controls button:hover {
+        background-color: #1e90ff; /* Change color on hover */
+    }
+
+    .journey {
+        padding: 50px 20px;
+    }
+
+    .roadmap-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .journey-item {
+        min-width: 100%;
+        max-width: 100%;
+        padding: 20px;
+    }
+
+    .contact {
+        padding: 50px 20px;
+    }
+}
+
+/* Small Screens (max-width: 480px) */
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .highlighted-paragraph span.title,
+    .highlighted-paragraph span.location {
+        font-size: 1.5rem;
+    }
+
+    .journey h2 {
+        font-size: 1.5rem;
+    }
+
+    .journey-item {
+        padding: 15px;
+    }
+
+    .contact h2 {
+        font-size: 1.5rem;
+    }
+}
     </style>
 </head>
 <body>
