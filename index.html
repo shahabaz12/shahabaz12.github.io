@@ -803,71 +803,82 @@
     }
 
     .carousel-container {
-        display: flex;
-        flex-direction: column; /* Stack items vertically */
-        gap: 15px; /* Reduce gap between items */
-        padding: 0 10px; /* Add horizontal padding */
-        align-items: center; /* Center-align items */
-    }
+    display: flex;
+    flex-wrap: nowrap; /* Ensure items don't wrap */
+    overflow-x: scroll; /* Allow horizontal scrolling */
+    gap: 10px; /* Reduce gap between items */
+    padding: 10px; /* Minimal padding for spacing */
+    scroll-behavior: smooth; /* Smooth scrolling effect */
+    max-width: 100%; /* Restrict the container to fit within the screen */
+    box-sizing: border-box; /* Include padding in width calculations */
+}
 
-    .carousel-item {
-        width: 90%; /* Use most of the screen width */
-        max-width: 360px; /* Set a reasonable max width */
-        padding: 10px; /* Reduce padding */
-        border-radius: 8px; /* Slightly rounded corners */
-        text-align: center; /* Center-align text */
-        background-color: #1e1e1e; /* Keep background consistent */
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Add a soft shadow */
-        overflow: hidden; /* Ensure content stays within bounds */
-    }
+.carousel-container::-webkit-scrollbar {
+    display: none; /* Hide the scrollbar for better visuals */
+}
 
-    .carousel-item img {
-        width: 100%; /* Ensure image scales to the container width */
-        height: auto; /* Maintain the aspect ratio */
-        max-height: 200px; /* Set a max height to ensure proper scaling */
-        object-fit: contain; /* Ensure full image is visible without cropping */
-        border-radius: 8px; /* Add rounded corners */
-        margin-bottom: 10px; /* Add spacing below the image */
-    }
+.carousel-item {
+    flex: none; /* Prevent items from shrinking */
+    width: calc(100% - 20px); /* Adjust width to fit the screen minus padding */
+    max-width: 360px; /* Ensure a reasonable max width */
+    background-color: #1e1e1e; /* Background color for cards */
+    border-radius: 8px; /* Slightly rounded corners */
+    text-align: center; /* Center-align text */
+    padding: 10px; /* Minimal padding for content */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Add a soft shadow */
+    overflow: hidden; /* Prevent content overflow */
+}
 
-    .carousel-item h3 {
-        font-size: 1rem; /* Reduce heading size for mobile */
-        margin-bottom: 8px; /* Add spacing below heading */
-    }
+.carousel-item img {
+    width: 100%; /* Ensure the image scales properly */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 180px; /* Limit the height for smaller screens */
+    object-fit: contain; /* Show the entire image without cropping */
+    border-radius: 8px; /* Add rounded corners to images */
+    margin-bottom: 10px; /* Space between the image and the text */
+}
 
-    .carousel-item p {
-        font-size: 0.9rem; /* Keep text readable */
-        margin: 0 0 10px; /* Reduce margin */
-        line-height: 1.4; /* Improve readability */
-    }
+.carousel-item h3 {
+    font-size: 1rem; /* Adjust font size for smaller screens */
+    font-weight: bold; /* Make the title stand out */
+    margin: 0 0 10px; /* Add margin below the title */
+    line-height: 1.3; /* Improve readability for multiple lines */
+    overflow-wrap: break-word; /* Handle long words */
+    word-break: break-word; /* Break words if needed */
+}
 
-    .carousel-item a {
-        font-size: 0.9rem; /* Adjust link size */
-        text-decoration: underline; /* Ensure link stands out */
-        color: #1e90ff; /* Highlight the link */
-    }
+.carousel-item p {
+    font-size: 0.9rem; /* Smaller text for description */
+    margin: 0 0 10px; /* Add spacing below the paragraph */
+    line-height: 1.5; /* Improve readability */
+}
 
-    .controls {
-        display: flex;
-        justify-content: space-between; /* Align buttons on the sides */
-        width: 100%;
-        margin-top: 10px; /* Add spacing above the buttons */
-        padding: 0 10px; /* Align controls with the carousel container */
-    }
+.carousel-item a {
+    font-size: 0.9rem; /* Adjust the link size */
+    text-decoration: underline; /* Highlight links with underline */
+    color: #1e90ff; /* Make the link color consistent */
+}
 
-    .controls button {
-        background-color: #333; /* Button background */
-        color: #fff; /* Button text */
-        padding: 10px 15px; /* Adjust padding for better touch targets */
-        border: none; /* Remove borders */
-        border-radius: 5px; /* Add rounded corners */
-        font-size: 1rem; /* Adjust font size */
-        cursor: pointer; /* Pointer cursor */
-    }
+.controls {
+    display: flex;
+    justify-content: space-between; /* Align buttons on the sides */
+    width: 100%;
+    margin-top: 10px; /* Add spacing above the buttons */
+}
 
-    .controls button:hover {
-        background-color: #1e90ff; /* Change color on hover */
-    }
+.controls button {
+    background-color: #333; /* Button background */
+    color: #fff; /* Button text */
+    padding: 10px 15px; /* Adjust padding for better touch targets */
+    border: none; /* Remove borders */
+    border-radius: 5px; /* Add rounded corners */
+    font-size: 1rem; /* Adjust font size */
+    cursor: pointer; /* Pointer cursor */
+}
+
+.controls button:hover {
+    background-color: #1e90ff; /* Change color on hover */
+}
 
     .journey {
         padding: 50px 20px;
